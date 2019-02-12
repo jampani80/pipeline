@@ -1,0 +1,21 @@
+pipeline {
+ agent any
+ stages {
+ 
+ 
+  
+  stage('Build') {
+ steps {
+  cd java-web-project
+  mvn clean install
+  
+  }
+  }
+ }
+ stage('Run') {
+ steps {
+ sh 'echo srini'
+ }
+ }
+ }
+}
